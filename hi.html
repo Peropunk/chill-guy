@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Create New Div</title>
+</head>
+<body>
+<div class="container">
+<h1>How to create new div on Click button use javascript.</h1>
+<button onclick="createDiv()">Create New Div</button>
+<div id="createDivBox"></div> 
+</div>
+<script>
+function createDiv() {
+  const node = document.createElement("div");
+  const textnode = document.createTextNode("Hi I am new Child");
+  node.appendChild(textnode);
+
+  // Get the parent element (div with id "createDivBox")
+  const parent = document.getElementById("createDivBox"); 
+
+  // Append the new div to the parent
+  parent.appendChild(node); 
+}
+</script>
+</body>
+</html>
